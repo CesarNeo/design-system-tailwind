@@ -20,7 +20,7 @@ const SIZES: Record<keyof typeof fontSize, string> = {
 }
 
 const text = tv({
-  base: 'font-sans text-gray100',
+  base: 'font-roboto text-gray100',
   variants: {
     size: SIZES,
   },

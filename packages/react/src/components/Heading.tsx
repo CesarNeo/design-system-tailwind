@@ -15,7 +15,7 @@ const SIZES = {
 }
 
 const heading = tv({
-  base: 'font-sans text-gray100 font-bold',
+  base: 'font-roboto text-gray100 font-bold',
   variants: {
     size: SIZES,
   },

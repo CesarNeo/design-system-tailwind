@@ -8,7 +8,7 @@ export default {
     extend: {
       colors,
       fontFamily: {
-        sans: fonts.default,
+        roboto: fonts.default,
         code: fonts.code,
       },
     },
