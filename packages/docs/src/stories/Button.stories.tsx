@@ -2,8 +2,14 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Button } from '@cesarneo/react'
 import { Title, Stories } from '@storybook/blocks'
 import { ArrowRight } from 'lucide-react'
+import { ComponentProps } from 'react'
 
-type Story = StoryObj<typeof Button.Root>
+type ButtonProps = ComponentProps<typeof Button.Root>
+
+type Story = StoryObj<ButtonProps>
+
+const variants: ButtonProps['variant'][] = ['primary', 'secondary', 'tertiary']
+const sizes: ButtonProps['size'][] = ['sm', 'md']
 
 const meta = {
   title: 'Form/Button',
@@ -11,6 +17,28 @@ const meta = {
   tags: ['autodocs'],
   args: {
     children: 'Button',
+    variant: 'primary',
+    size: 'md',
+    disabled: false,
+  },
+  argTypes: {
+    variant: {
+      options: variants,
+      control: {
+        type: 'select',
+      },
+    },
+    size: {
+      options: sizes,
+      control: {
+        type: 'select',
+      },
+    },
+    disabled: {
+      control: {
+        type: 'boolean',
+      },
+    },
   },
   parameters: {
     docs: {

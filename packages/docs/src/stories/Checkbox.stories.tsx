@@ -6,7 +6,16 @@ type Story = StoryObj<CheckboxProps>
 export default {
   title: 'Form/Checkbox',
   component: Checkbox,
-  args: {},
+  args: {
+    checked: false,
+  },
+  argTypes: {
+    checked: {
+      control: {
+        type: 'boolean',
+      },
+    },
+  },
   decorators: [
     (StoryComponent) => (
       <Box>

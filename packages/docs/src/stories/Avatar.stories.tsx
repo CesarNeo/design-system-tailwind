@@ -12,6 +12,18 @@ const meta = {
     src: 'https://github.com/cesarneo.png',
     alt: 'Cesar Emmanuel',
   },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      },
+    },
+    alt: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
   parameters: {
     docs: {
       page: () => (
